@@ -1,7 +1,7 @@
 import Banner from '../components/Banner'
 import Thumb from '../components/Thumb'
 import logements from '../../src/data/logements.json'
-import '../assets/style/Home.css'
+import '../assets/style/Home.scss'
 
 function Home() {
   return (

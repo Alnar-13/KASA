@@ -1,4 +1,4 @@
-import '../assets/style/About.css'
+import '../assets/style/About.scss'
 import AboutData from '../data/about.json'
 import Collapse from '../components/Collapse'
 import Banner from '../components/Banner'

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useParams, Navigate } from 'react-router-dom'
 import LogementsData from '../data/logements.json'
-import '../assets/style/Logement.css'
+import '../assets/style/Logement.scss'
 import Collapse from '../components/Collapse'
 import ArrowLeft from '../assets/image/arrow-left.png'
 import ArrowRight from '../assets/image/arrow-right.png'

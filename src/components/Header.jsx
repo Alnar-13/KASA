@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import '../assets/style/Header.css'
+import '../assets/style/Header.scss'
 const HeaderStyled = styled.header`
   width: 100%;
   display: flex;
