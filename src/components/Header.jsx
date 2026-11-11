@@ -47,7 +47,7 @@ const Header = () => {
   return (
     <HeaderStyled>
       <NavStyled>
-        <a href="/">
+        <NavLink to="/" aria-label="Kasa, accueil">
           <LogoStyled
             width="211"
             height="68"
@@ -76,7 +76,7 @@ const Header = () => {
               fill="#FF6060"
             />
           </LogoStyled>
-        </a>
+        </NavLink>
         <UlStyled>
           <NavLink
             to="/"

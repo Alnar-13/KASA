@@ -51,7 +51,7 @@ function Footer() {
           fill="#ffffff"
         />
       </svg>
-      <p>© 2020 Kasa. All rights reserved</p>
+      <p>© 2025 Kasa. All rights reserved</p>
     </ContainerStyled>
   )
 }

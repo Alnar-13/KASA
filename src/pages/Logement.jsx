@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useParams, Navigate } from 'react-router-dom'
 import LogementsData from '../data/logements.json'
 import '../assets/style/Logement.scss'
@@ -11,15 +10,14 @@ import { useState } from 'react'
 function Logement() {
   // Hook permetant d'accéder a l'id depuis l'url
   const { id } = useParams()
+  const [slide, setSlide] = useState(0)
   const selectedLogement = LogementsData.find((house) => house.id === id)
   if (!selectedLogement) {
-    return <Navigate to="*" />
+    return <Navigate to="/404" replace />
   }
   const tags = selectedLogement.tags
   const pictures = selectedLogement.pictures
   const length = pictures.length
-
-  const [slide, setSlide] = useState(0)
 
   const nextSlide = () => {
     setSlide(slide === pictures.length - 1 ? 0 : slide + 1)
@@ -51,6 +49,7 @@ function Logement() {
               {length > 1 && (
                 <img
                   className="arrow-left"
+                  alt="Image précédente"
                   src={ArrowLeft}
                   onClick={prevSlide}
                 />
@@ -58,6 +57,7 @@ function Logement() {
               {length > 1 && (
                 <img
                   className="arrow-right"
+                  alt="Image suivante"
                   src={ArrowRight}
                   onClick={nextSlide}
                 />
@@ -75,7 +75,7 @@ function Logement() {
               <div className="tags-rating">
                 <ul className="logement-tags">
                   {tags.map((tag, index) => {
-                    return <li key={(tag, index)}>{tag}</li>
+                    return <li key={index}>{tag}</li>
                   })}
                 </ul>
               </div>
@@ -85,6 +85,7 @@ function Logement() {
                 <div className="host-name">{selectedLogement.host.name}</div>
                 <img
                   src={selectedLogement.host.picture}
+                  alt={selectedLogement.host.name}
                   className="host-picture"
                 />
               </div>

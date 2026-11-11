@@ -20,7 +20,7 @@ const ContainerStyled = styled(Link)`
   height: 100%;
   position: relative;
 `
-//pour chaque éléments du tableau 'logements' on créer: un link vers la route logement + id du logement, l'img du logement et le titre du logement
+//pour chaque éléments du tableau 'logements' on crée : un link vers la route logement + id du logement, l'img du logement et le titre du logement
 const Thumb = ({ logements }) => {
   return logements.map((logement) => (
     <ContainerStyled to={`/logement/${logement.id}`} key={logement.id}>
@@ -29,7 +29,7 @@ const Thumb = ({ logements }) => {
     </ContainerStyled>
   ))
 }
-// on définis la proptype (logements), on précise que c'est un tableau, et qu'il est obligatoire
+// on définit la proptype (logements), on précise que c'est un tableau, et qu'il est obligatoire
 Thumb.propTypes = {
   logements: PropTypes.array.isRequired,
 }
